@@ -25,7 +25,7 @@ class timer extends Component {
       <>
         <div className="time">
           <p className="realtime" data={this.state}>
-            {this.state.hours} : {this.state.mins} : {this.state.seconds}
+            {this.state.hours} : {this.state.seconds} : {this.state.seconds}
           </p>
         </div>
       </>
