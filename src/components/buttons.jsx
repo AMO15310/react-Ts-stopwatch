@@ -10,36 +10,12 @@ class buttons extends Component {
       seconds: this.props.data.seconds,
     };
   }
-  startTimer = () => {
-    const start = setInterval(() => {
-      this.setState({
-        seconds: this.state.seconds + 1,
-      });
-      if (this.state.seconds == 60) {
-        this.state.mins = this.state.mins + 1;
-        this.setState({
-          seconds: 0,
-        });
-      }
-      if (this.state.mins == 60) {
-        this.state.hours = this.state.mins;
-        this.setState({
-          mins: 0,
-        });
-      }
-    }, 100);
-    console.log(this.state.mins);
-    this.stopTimer = () => {
-      return clearInterval(start);
-    };
-  };
+  startTimer = () => {};
   stopTimer = () => {
     clearInterval();
   };
 
-  stopTimer = () => {
-    clearInterval(this.startTimer);
-  };
+  stopTimer = () => {};
 
   resetTimer = () => {
     this.stopTimer();
