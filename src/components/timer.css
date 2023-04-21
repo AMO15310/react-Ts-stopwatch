@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    height: 100vh;
+    background-image: linear-gradient(aqua,skyblue);
+    width: 100%;
+}
+.center-timer-component{
+    height: 80vh;
+    width: 80%;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer-main{
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+    @media (max-width:650px) {
+        gap:10%;
+    }
+    /* margin-top: 10%; */
+
+}
+.hrs-component,.mins-component,.secs-component{
+    border: 3px solid orange;
+    color: black;
+    font-size: x-large;
+    font-weight: 700;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.control-buttons{
+    margin-top: 15%;
+    display: flex;
+    /* border: 5px solid red; */
+    gap: 10%;
+    justify-content: center;
+    width: 100%;
+    /* gap: 4rem; */
+    /* padding: 2rem; */
+}
+button{
+    width: 7rem;
+    height: 3rem;
+}
