@@ -34,6 +34,29 @@ export const TimerReducer = (
         hrs: 0,
         secs: 0,
       };
+    case TimerIncre.stopTimer: {
+      return {
+        ...state,
+      };
+    }
+    case TimerIncre.resetSecs:
+      if (state.secs === 60) {
+        return {
+          mins: state.mins + 1,
+          secs: 0,
+          hrs: 0,
+        };
+      }
+      if (state.mins === 60) {
+        return {
+          mins: 0,
+          secs: 0,
+          hrs: state.hrs + 1,
+        };
+      }
+      return {
+        ...state,
+      };
 
     default:
       return state;
